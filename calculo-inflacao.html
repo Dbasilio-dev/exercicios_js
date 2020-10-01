@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo Inflação</title>
+</head>
+<body>
+    <script>
+        function mostra(string) {
+            document.write(string)
+        }
+        function calculaVariacao(produto1, produto2) {
+           var resul = produto1 - produto2
+           return resul
+        }
+        function calculaDiaria(diaria) {
+            var resul = diaria / 6
+            return resul
+        }
+        function calculaMedia(produto1, produto2, produto3) {
+            var resul = (produto1 + produto2 + produto3) / 3
+            return resul
+        }
+        
+        var tomateAntigo = 3.30
+        var tomateNovo = 4.70
+        var arrozAntigo = 2.99
+        var arrozNovo = 3.25
+        var cenouraAntigo = 3.99
+        var cenouraNovo = 4.14
+        
+
+        var inflaTomate = calculaVariacao(tomateNovo, tomateAntigo)
+        var inflaDiariaTomate = calculaDiaria(inflaTomate) 
+        var inflaArroz =  calculaVariacao(arrozNovo, arrozAntigo)
+        var inflaDiariaArroz = calculaDiaria(inflaArroz)
+        var inflaCenoura = calculaVariacao(cenouraNovo, cenouraAntigo)
+        var inflaDiariaCenoura = calculaDiaria(inflaCenoura)
+        var inflaMedia = calculaMedia(inflaTomate, inflaArroz, inflaCenoura)
+        
+        mostra("A inflação media dos produtos: " + inflaMedia.toFixed(2) + "<br>")
+        mostra("----------------------------------------------------------------- <br>")
+        mostra("Inflação do tomate no periodo de 6 dias: " + inflaTomate.toFixed(2) + "<br>")
+        mostra("Inflação do tomate no periodo de 6 dias: " + inflaArroz.toFixed(2) + "<br>")
+        mostra("Inflação do tomate no periodo de 6 dias: " + inflaCenoura.toFixed(2) + "<br>")
+        mostra("----------------------------------------------------------------- <br>")
+        mostra("Inflação diária do tomate no periodo de 6 dias: " + inflaDiariaTomate.toFixed(2) + "<br>")
+        mostra("Inflação diária do arroz no periodo de 6 dias: " + inflaDiariaArroz.toFixed(2) + "<br>")
+        mostra("Inflação diária da cenoura no periodo de 6 dias: " + inflaDiariaCenoura.toFixed(2) + "<br>")
+
+        
+        
+
+    </script>
+</body>
+</html>
