@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pizzaria resilia</title>
+</head>
+<body>
+    <script>
+        var custoProdPizza = prompt("Quanto é o custo de produção da pizza? ")
+        var custoPizza = prompt("Qual é o valor de venda da pizza? ")
+        var nomePizza = prompt("Qual o nome da pizza? ")
+        var impostoPizza = (custoPizza * 8.9) / 100
+        var lucroPizza = custoPizza - custoProdPizza - impostoPizza
+        alert(`Para a pizza ${nomePizza} o lucro líquido é de R$ ${lucroPizza} e o imposto é de R$ ${impostoPizza}`)
+    </script>
+</body>
+</html>
