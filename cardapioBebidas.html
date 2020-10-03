@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardapioBebidas</title>
+</head>
+<body>
+    <script>
+        function cardapioBebidas() {
+             var respostaCliente = prompt("1 -> Refrigerante \r\n 2 -> Suco \r\n 3 -> Água \r\n Qual tipo de bebida você quer?")
+             return respostaCliente
+
+        }
+        function valorBebidas(informaValor) {
+            if (informaValor == 1 ) {
+                
+                var retornoBebida = prompt("1 -> Coca-cola R$: 4,00 \r\n 2 -> Kuat R$: 3,50 \r\n 3 -> Fanta-laranja R$: 3,50 \r\n 4 -> Fanta-uva R$: 3,50 \r\n Digite a numeração do sabor que você deseja.")
+                return retornoBebida
+
+            } else if (informaValor == 2 ) {
+            
+                var retornoBebida = prompt("1 -> Morango R$: 4,00 \r\n 2 -> Maracujá R$: 3,50  \r\n 3 -> Limonada R$: 3,50 \r\n 4 -> Goiaba R$: 3,50 \r\n Digite a numeração do sabor que você deseja.")
+                return retornoBebida
+
+            } else if (informaValor == 3) {
+    
+                var retornoBebida = prompt("1 -> Agua com gás R$: 2,50 \r\n 2 -> Agua sem gás R$: 2,50 \r\n Digite a numeração do sabor que você deseja.")
+                return retornoBebida
+                
+            } else {
+                alert("Você digitou a numeração errada!")
+            }
+            
+        }
+        function escolhaBebidas(escolhaCliente, escolhaAnterior) {
+            if (escolhaCliente == 1) {
+                switch (escolhaAnterior) {
+                    case 1:
+                    document.write("Você escolheu coca-cola!")
+                    break;
+                    case 2: 
+                    document.write("Você escolheu Kuat!")
+                    break;
+                    case 3: 
+                    document.write("Você escolheu Fanta-Laranja!")
+                    break;
+                    case 4: 
+                    document.write("Você escolheu fanta-uva!")
+                    break;
+                    default: 
+                    document.write("Você escolheu uma bebida inexistente.")
+                }
+
+            } else if(escolhaCliente == 2) {
+                switch (escolhaAnterior) {
+                    case 1:
+                    document.write("Você escolheu morango!")
+                    break;
+                    case 2: 
+                    document.write("Você escolheu maracujá!")
+                    break;
+                    case 3: 
+                    document.write("Você escolheu Limonada!")
+                    break;
+                    case 4: 
+                    document.write("Você escolheu Goiaba!")
+                    break;
+                    default: 
+                    document.write("Você escolheu uma bebida inexistente.")
+                }
+            } else if(escolhaCliente == 3) {
+                switch (escolhaAnterior) {
+                    case 1:
+                    document.write("Você escolheu Agua com gás!")
+                    break;
+                    case 2: 
+                    document.write("Você escolheu Agua sem gás!")
+                    break;
+                    default: 
+                    document.write("Você escolheu uma bebida inexistente.")
+                }
+            } else {
+                document.write("Você inseriu um numero inexistente.")
+            }
+        }
+        var bebidaCliente = cardapioBebidas();
+        // var bebidaCliente = prompt("Qual tipo de bebida você quer? ")
+        var tipoBebida = parseInt(valorBebidas(bebidaCliente))
+        escolhaBebidas(bebidaCliente, tipoBebida);
+    </script>
+</body>
+</html>
