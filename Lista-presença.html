@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presença</title>
+</head>
+<body>
+    <script>
+        var listaPresença = ["Daniel", "Caroline", "Roberta", "Eric", "Paulo"];
+        var listaPresentes = ["Daniel", "Roberta", "Eric"];
+        // debugger;
+        function validaPresença(lista1, lista2) {
+            var pegaPessoasLista = [];
+                for(i = 0; i < lista1.length; i++) {
+                    if(lista2.indexOf(lista1[i]) == -1) {
+                        pegaPessoasLista.push(lista1[i])
+                    }
+                } 
+            
+            return pegaPessoasLista
+        }
+
+        var pessoasFaltaram = validaPresença(listaPresença, listaPresentes)
+        var quantidadeFaltas = pessoasFaltaram.length
+        console.log(`A quantidade de pessoas que faltaram foi de ${quantidadeFaltas} e as pessoas que faltaram são: ${pessoasFaltaram}`)
+    </script>
+</body>
+</html>

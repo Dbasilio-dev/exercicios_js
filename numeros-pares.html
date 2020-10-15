@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumerosPares</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+        
+        
+        function contaPares() {
+            var contador = 0;
+            while (contador < 100) {
+                contador = contador + 2
+                document.write(contador + " ")
+            }
+        }
+        contaPares();
+        document.write("FIM!")
+        
+        // ----------------------------------------------------------------
+        pulaLinha();        
+        // Exercício 2.
+
+        var contador = 30;
+        while (contador <= 40) {
+            if (contador == 33 || contador == 37) {
+                document.write("")
+                contador = contador + 1
+            } else {
+                document.write(contador + " ");
+                contador = contador + 1
+            }
+        }
+        document.write("FIM!")
+
+        
+        pulaLinha();
+        // Exercício 3
+
+        var contador = 20;
+        while (contador >= 0) {
+            document.write(contador + " ")
+            contador = contador - 1;
+        }
+        document.write("FIM!")
+    </script>
+</body>
+</html>
