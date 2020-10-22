@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotaoDinamico</title>
+    <style>
+        h1 {
+            border: 3px solid black;
+            display: inline;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var pegaBody = document.querySelector("body");
+        var botao = document.createElement("h1");
+        botao.innerText = "Botao";
+        pegaBody.appendChild(botao);
+        botao.addEventListener("mousedown", function() {
+            botao.innerText = "Clicou!";
+            botao.style.backgroundColor = "Red";
+        });
+        botao.addEventListener("mouseup", function() {
+            botao.innerText = "Soltou!";
+            botao.style.backgroundColor = "lightgreen";
+            
+        });
+        botao.addEventListener("mouseenter", function() {
+            botao.innerText = `Entrou!`;
+            botao.style.backgroundColor = "blue";
+        });
+        botao.addEventListener("mouseleave", function () {
+            botao.innerText = `Botao`
+            botao.style.backgroundColor = "white";
+        });
+    </script>
+</body>
+</html>
